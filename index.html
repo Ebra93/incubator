@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Incubator Pro</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1c1b1f;
+      --text-secondary: #49454f;
+      --primary: #6750a4;
+      --primary-container: #eaddff;
+      --outline: #79747e;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    header {
+      background: var(--surface);
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+    main {
+      background: var(--surface);
+      padding: 1.5rem 1.5rem 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border-radius: 12px;
+    }
+    h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    h2:first-child { margin-top: 0; }
+    p, li {
+      color: var(--text-secondary);
+      margin: 0.5rem 0;
+    }
+    ul {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1b1f;
+        --surface: #2b2930;
+        --text: #e6e1e5;
+        --text-secondary: #cac4d0;
+        --primary: #d0bcff;
+        --primary-container: #4f378b;
+        --outline: #938f99;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Datenschutzerklärung</h1>
+      <p class="meta">Incubator Pro · Stand: März 2025</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>1. Verantwortliche Stelle</h2>
+      <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit der App „Incubator Pro“ ist der Anbieter der App. Bei Fragen zum Datenschutz wenden Sie sich bitte an die im App-Store bzw. in der App angegebene Kontaktmöglichkeit.</p>
+
+      <h2>2. Erhebung und Nutzung von Daten</h2>
+      <p>Die App Incubator Pro unterstützt Sie bei der Steuerung und Überwachung von Brutgeräten (Incubatoren) für verschiedene Vogelarten. Dabei können folgende Daten verarbeitet werden:</p>
+      <ul>
+        <li><strong>Gerätedaten:</strong> Informationen zu Ihrem Smartphone (z. B. Gerätetyp, Betriebssystemversion) für die einwandfreie Funktion der App.</li>
+        <li><strong>Nutzungsdaten:</strong> Einstellungen, Brutzyklen und Steuerungsdaten der Incubatoren, die Sie in der App verwenden. Diese werden lokal auf Ihrem Gerät und ggf. mit unserem Backend bzw. einer Datenbank ausgetauscht.</li>
+        <li><strong>Push-Benachrichtigungen:</strong> Wenn Sie Benachrichtigungen aktivieren, nutzen wir dafür den Dienst Firebase Cloud Messaging. Dazu kann eine gerätespezifische Kennung (z. B. FCM-Token) verarbeitet werden.</li>
+      </ul>
+
+      <h2>3. Firebase</h2>
+      <p>Die App nutzt Dienste von Google Firebase:</p>
+      <ul>
+        <li><strong>Firebase Realtime Database:</strong> Zum Speichern und Abrufen von Brut- und Gerätedaten in Echtzeit.</li>
+        <li><strong>Firebase Cloud Messaging (FCM):</strong> Zum Versand von Push-Benachrichtigungen an Ihr Gerät.</li>
+      </ul>
+      <p>Die Verarbeitung durch Firebase unterliegt der <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase-Datenschutzerklärung</a> und den <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google-Datenschutzbestimmungen</a>. Daten können dabei in Rechenzentren (u. a. EU) verarbeitet werden.</p>
+
+      <h2>4. Lokale Speicherung</h2>
+      <p>Einstellungen und bestimmte App-Daten werden lokal auf Ihrem Gerät gespeichert (z. B. über Shared Preferences). Diese Daten verlassen Ihr Gerät nur, soweit die App mit unserem Backend oder Firebase kommuniziert.</p>
+
+      <h2>5. Kommunikation mit Backend und MQTT</h2>
+      <p>Die App tauscht über das Internet Daten mit einem Backend-Server aus. Steuerungsbefehle an Incubatoren können über einen MQTT-Broker auf dem Backend gesendet werden. Dabei werden nur die für die Steuerung und Anzeige erforderlichen Daten übertragen.</p>
+
+      <h2>6. Berechtigungen</h2>
+      <p>Die App benötigt u. a. folgende Berechtigungen:</p>
+      <ul>
+        <li><strong>Internet:</strong> Für die Kommunikation mit Backend, Firebase und MQTT.</li>
+        <li><strong>Benachrichtigungen (POST_NOTIFICATIONS):</strong> Um Sie per Push über relevante Vorgänge an Ihren Incubatoren zu informieren.</li>
+      </ul>
+
+      <h2>7. Rechtsgrundlage (DSGVO)</h2>
+      <p>Sofern personenbezogene Daten verarbeitet werden, erfolgt dies auf Grundlage Ihrer Einwilligung, zur Vertragserfüllung oder unserer berechtigten Interessen an Betrieb und Verbesserung der App, jeweils im Einklang mit der DSGVO.</p>
+
+      <h2>8. Speicherdauer</h2>
+      <p>Daten werden nur so lange gespeichert, wie es für den Betrieb der App, die Erfüllung vertraglicher Pflichten oder gesetzlicher Aufbewahrungsfristen erforderlich ist. Lokale Daten auf Ihrem Gerät können Sie durch Deinstallieren der App löschen.</p>
+
+      <h2>9. Ihre Rechte</h2>
+      <p>Sie haben u. a. das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung sowie auf Datenübertragbarkeit und Widerspruch. Sie können sich bei einer Aufsichtsbehörde beschweren. Kontaktieren Sie uns dazu über die in der App angegebene Adresse.</p>
+
+      <h2>10. Änderungen</h2>
+      <p>Diese Datenschutzerklärung kann bei Bedarf angepasst werden. Die aktuelle Version finden Sie in der App oder auf dieser Seite. Wir empfehlen, sie regelmäßig zur Kenntnis zu nehmen.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Incubator Pro · Datenschutzerklärung</p>
+    </div>
+  </footer>
+</body>
+</html>
